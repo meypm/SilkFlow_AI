@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ff5a1f" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>SilkFlow AI — Full MVP</title>
+  <meta name="description" content="SilkFlow AI — рабочий MVP цифровой логистической платформы Китай — Кыргызстан — Узбекистан" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">S</span><span>SilkFlow <b>AI</b></span></div>
+    <nav class="nav">
+      <a href="#overview">Главная</a>
+      <a href="#shipments">Грузы</a>
+      <a href="#operations">Операции</a>
+      <a href="#support">Поддержка</a>
+    </nav>
+    <div class="top-actions">
+      <span id="dbStatus" class="db-status local" title="Режим хранения данных"><i></i><span>Демо-база</span></span>
+      <label class="role-switch"><span>Роль</span>
+        <select id="roleSelect">
+          <option value="client">Клиент</option>
+          <option value="sender">Отправитель</option>
+          <option value="warehouse">Склад / Карго</option>
+          <option value="driver">Водитель</option>
+          <option value="receiver">Получатель</option>
+        </select>
+      </label>
+      <button class="icon-btn" id="notifyBtn" title="Уведомления">🔔<span class="badge">3</span></button>
+      <div class="profile"><span class="avatar">SF</span><div><b>SilkFlow Demo</b><small id="roleLabel">Клиент</small></div></div>
+    </div>
+  </header>
+
+  <main id="app"><div class="boot-loader"><div class="spinner"></div><p>Подключаем SilkFlow AI…</p></div></main>
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- Supabase SDK. Если облачная база не настроена, приложение автоматически работает локально. -->
+  <script src="config.js"></script>
+  <script src="assets/db.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
